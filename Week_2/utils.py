@@ -15,9 +15,8 @@ def download_data(month,year):
     dataset = "green_tripdata"
     # Define month range
     myList = np.linspace(1,3,3) # From Jan to Feb
-    
+
     Path(f'./data/{year}/').mkdir(parents=True,exist_ok=True)
-    
     for a in myList:
         print(f"-_-_-_-_-_- Fetching Data for {year}/{month} ")
         
