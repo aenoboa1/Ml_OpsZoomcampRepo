@@ -1,5 +1,5 @@
 ## Data Fetcher for green tripdata 
-## Load data per year
+## Load data per year and month range
 
 import os
 import sys
@@ -9,7 +9,7 @@ import numpy as np
 def download_data(month_start,month_end,year):
     dataset = "green_tripdata"
     # Define month range
-    myList = np.linspace(int(month_start),int(month_end),int(month_end)) # From Jan to Feb
+    myList = np.linspace(int(month_start),int(month_end),int(month_end)) # From month a->b
 
     Path(f'./data/{year}/').mkdir(parents=True,exist_ok=True)
     for a in myList:
